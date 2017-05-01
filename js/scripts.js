@@ -1,13 +1,9 @@
 jQuery(document).ready(function(){
-  jQuery("h1").click(function() {
-    alert("This is a header.");
+  jQuery("img src="img/mowni.jpg"").click(function() {
+
   });
 
-  jQuery("p").click(function() {
-    alert("This is a paragraph.");
-  });
+  jQuery("img src="img/yazh,jpg"").click(function() {
 
-  jQuery("img").click(function() {
-    alert("This is an image.");
   });
 });
