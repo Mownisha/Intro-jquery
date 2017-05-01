@@ -1,3 +1,4 @@
+jQuery(document).ready(function(){
 function firstLast(sen)
 {
     var x=sen.charAt(0);
@@ -31,6 +32,16 @@ function call1(sen)
   return g;
 };
 
+function call2(sen)
+{
+  var c=firstLast(sen);
+  var d=rev(c);
+  var r=sen+d;
+  alert("The concatinated value is "+r);
+  var f=center(sen,d);
+  return f;
+};
+
 function center(sen,g)
 {
   var a=sen.length;
@@ -44,12 +55,22 @@ function center(sen,g)
 
 function reverse(r)
 {
-  var sp=sen.split("");
+  alert("Entered reverse!")
+  var sp=r.split("");
   var re=sp.reverse();
   var jo=re.join("");
   alert("The resultant reversed string is "+jo);
 };
 
-var sen=prompt("Enter a sentence:");
-alert(sen);
-var r=call1(sen);
+  jQuery(".mowni").click(function() {
+    var sen=prompt("Enter a sentence:");
+    alert(sen);
+    var r=call2(sen);
+  });
+
+  jQuery(".yazh").click(function() {
+    var sen=prompt("Enter a sentence:");
+    alert(sen);
+    var s=call1(sen);
+  });
+});
